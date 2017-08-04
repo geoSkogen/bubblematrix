@@ -1,0 +1,58 @@
+body {
+  padding: 1em;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  position: relative;
+}
+
+input {
+  font-size: 16px;
+  padding: 0.5em;
+  border-radius: 2px;
+  border: 2px solid lightsteelblue;
+  margin: 1em 0.5em 0 0.5em;
+}
+
+div.flexOuterCenter {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+div.matrixContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+button.matrixButton {
+  display: block;
+}
+
+button.matrixButton {
+  margin-top: 1.4em;
+}
+
+div.matrixButton {
+  color: white;
+  background-color: cornflowerblue;
+  border: none;
+  margin: 1.4em 0 0 0.75em;
+  padding: 0.75em;
+  height: 2.5em;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+div.bubble {
+  color: white;
+  background-color: cornflowerblue;
+  border: none;
+  margin: 1em;
+  padding: 0.25em 0.5em 0.5em 0.5em;
+  border-radius: 6px 6px 6px 6px;
+  cursor: pointer;
+}
+
+input.matrixFormField {
+  display: none;
+}
