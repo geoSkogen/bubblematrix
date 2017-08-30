@@ -5,6 +5,7 @@ window.addEventListener('load', initMatrix);
 function initMatrix() {
   var ins = document.getElementsByClassName("matrixInput");
   var buts = document.getElementsByClassName("matrixButton");
+  var submits = document.getElementsByClassName("submitButton");
   var conts = document.getElementsByClassName("matrixContainer");
   var fields = document.getElementsByClassName("matrixFormField");
   var list = [[]];
@@ -39,6 +40,7 @@ function initMatrix() {
     string = list[index].join();
     fields[index].value = string;
     ins[index].value = "";
+	//fields[index].style.display = "none";
   }
 
   function getInput(index) {
@@ -52,6 +54,7 @@ function initMatrix() {
           makeBubble(inputArr[i], index);
         }
       }
+	  ins[index].focus()
     }
   }
 
@@ -71,5 +74,25 @@ function initMatrix() {
 
   function assignEnter(input, index) {
     input.addEventListener("keypress", function () { if (event.keyCode == 13) {getInput(index)}})
+  }
+
+  for (var i = 0; i < submits.length; i++) {
+	assignSubmit(submits[i], i)
+  }
+  
+  function assignSubmit(button, index) {
+	button.onclick = function () {
+	  toggleHidden(this, index)
+	}
+  }
+  
+  function toggleHidden(button, index) {
+	if (fields[index].style.display === "none") {
+	  fields[index].style.display = "block"
+	  button.innerHTML = "hide<br/>results"
+	} else {
+	  fields[index].style.display = "none"
+	  button.innerHTML = "show<br/>results"
+	}
   }
 }

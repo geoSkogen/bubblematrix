@@ -12,19 +12,14 @@ input {
   margin: 1em 0.5em 0 0.5em;
 }
 
-div.flexOuterCenter {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-}
-
+div.flexOuterCenter,
 div.matrixContainer {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
 
-button.matrixButton {
+button.matrixButton{
   display: block;
 }
 
@@ -32,7 +27,8 @@ button.matrixButton {
   margin-top: 1.4em;
 }
 
-div.matrixButton {
+div.matrixButton,
+div.submitButton {
   color: white;
   background-color: cornflowerblue;
   border: none;
@@ -55,4 +51,6 @@ div.bubble {
 
 input.matrixFormField {
   display: none;
+  width: 50%;
+  text-align: center;
 }
